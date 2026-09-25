@@ -1,0 +1,49 @@
+-------------------------------------------------------------------------------
+Test set: com.sdet.test.tests.AutomationTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 12.63 s <<< FAILURE! -- in com.sdet.test.tests.AutomationTest
+com.sdet.test.tests.AutomationTest.shouldCount50Words -- Time elapsed: 2.743 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: <50>
+     but: was <0>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
+	at net.serenitybdd.screenplay.QuestionConsequence.evaluateFor(QuestionConsequence.java:49)
+	at net.serenitybdd.screenplay.Actor.check(Actor.java:420)
+	at net.serenitybdd.screenplay.Actor.should(Actor.java:392)
+	at com.sdet.test.tests.AutomationTest.shouldCount50Words(AutomationTest.java:37)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.sdet.test.tests.AutomationTest.shouldSeeThe3MostRepeatedWords -- Time elapsed: 2.119 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: <50>
+     but: was <0>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
+	at net.serenitybdd.screenplay.QuestionConsequence.evaluateFor(QuestionConsequence.java:49)
+	at net.serenitybdd.screenplay.Actor.check(Actor.java:420)
+	at net.serenitybdd.screenplay.Actor.should(Actor.java:392)
+	at com.sdet.test.tests.AutomationTest.shouldSeeThe3MostRepeatedWords(AutomationTest.java:52)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.sdet.test.tests.AutomationTest.shouldCount50WordsWithHisCharacters -- Time elapsed: 4.056 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: <50>
+     but: was <0>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
+	at net.serenitybdd.screenplay.QuestionConsequence.evaluateFor(QuestionConsequence.java:49)
+	at net.serenitybdd.screenplay.Actor.check(Actor.java:420)
+	at net.serenitybdd.screenplay.Actor.should(Actor.java:392)
+	at com.sdet.test.tests.AutomationTest.shouldCount50WordsWithHisCharacters(AutomationTest.java:47)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
