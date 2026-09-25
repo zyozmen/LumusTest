@@ -26,7 +26,6 @@ public class WriteTextOnCounter implements Task {
             Enter.theValue(text).into(WordCountPage.TEXT_INPUT),
             WaitUntil.the(WordCountPage.WORD_COUNT, containsText("50 words"))
               .forNoMoreThan(5).seconds());
-        );
     }
     
 }
