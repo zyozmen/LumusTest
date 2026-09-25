@@ -14,7 +14,7 @@ documentacion que tendra el proyecto
 - Selenium WebDriver con Google Chrome
 
 ## Comandos Maven
-- mvn clean test: corre las pruebas automatizadas
+- mvn clean verify: corre las pruebas automatizadas
 - mvn -Dtest=SecurityTestSuite test: para correr la suite de automatizacion
 
 El reporte Serenity se genera en `target/site/serenity/index.html`.

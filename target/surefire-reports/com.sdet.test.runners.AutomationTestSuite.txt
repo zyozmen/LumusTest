@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.sdet.test.runners.AutomationTestSuite
 -------------------------------------------------------------------------------
-Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.94 s -- in com.sdet.test.runners.AutomationTestSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.21 s -- in com.sdet.test.runners.AutomationTestSuite

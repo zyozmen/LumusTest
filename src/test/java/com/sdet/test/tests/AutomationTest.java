@@ -7,16 +7,17 @@ import org.openqa.selenium.WebDriver;
 
 import com.sdet.test.questions.WordCount;
 import com.sdet.test.tasks.OpenPortalPage;
-
+import com.sdet.test.tasks.WriteTextOnCounter;
 import net.serenitybdd.annotations.Managed;
 import net.serenitybdd.junit5.SerenityJUnit5Extension;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
-
 import static net.serenitybdd.screenplay.GivenWhenThen.givenThat;
 import static net.serenitybdd.screenplay.GivenWhenThen.then;
+import static net.serenitybdd.screenplay.GivenWhenThen.when;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static org.hamcrest.Matchers.equalTo;
+
 
 @ExtendWith(SerenityJUnit5Extension.class)
 public class AutomationTest {
@@ -34,19 +35,26 @@ public class AutomationTest {
 
     @Test
     void shouldCount50Words() {
-      then(actor).should(seeThat("the word count", WordCount.of(), equalTo(50)));
+          when(actor).attemptsTo(WriteTextOnCounter.withText(TEXT_TO_COUNT));
+          then(actor).should(seeThat("the word count",
+              currentActor -> WordCount.of().answeredBy(currentActor).words(), equalTo(50)));
     }
 
     @Test
-    void shouldCount500Characters() {
-       // TODO: Implementacion de validacion de conteo de caracteres
+    void shouldCount283Characters() {
+       when(actor).attemptsTo(WriteTextOnCounter.withText(TEXT_TO_COUNT));
+          then(actor).should(seeThat("the word count",
+              currentActor -> WordCount.of().answeredBy(currentActor).characters(), equalTo(283)));
     }
 
     @Test
     void shouldCount50WordsWithHisCharacters() {
-       then(actor).should(seeThat("the word count", WordCount.of(), equalTo(50)));
+       when(actor).attemptsTo(WriteTextOnCounter.withText(TEXT_TO_COUNT));
+          then(actor).should(seeThat("the character count",
+              currentActor -> WordCount.of().answeredBy(currentActor).words(), equalTo(50)));
+           then(actor).should(seeThat("the character count",
+              currentActor -> WordCount.of().answeredBy(currentActor).characters(), equalTo(283)));
     }
-
     @Test
     void shouldSeeThe3MostRepeatedWords() {
       then(actor).should(seeThat("the word count", WordCount.of(), equalTo(50)));

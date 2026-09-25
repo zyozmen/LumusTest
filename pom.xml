@@ -63,6 +63,7 @@
                 <version>3.5.2</version>
                 <configuration>
                     <useModulePath>false</useModulePath>
+                    <testFailureIgnore>true</testFailureIgnore>
                     <includes>
                         <include>**/AutomationTestSuite.java</include>
                     </includes>

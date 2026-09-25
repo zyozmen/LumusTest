@@ -1,7 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="com.sdet.test.tests.AutomationTest" skipped="0" tests="1" time="2.75" timestamp="2026-09-24 08:09:56"><testcase classname="com.sdet.test.tests.AutomationTest" name="Should count50 words"><failure message="&#13;&#10;Expected: &lt;50&gt;&#13;&#10;     but: was &lt;0&gt;" type="java.lang.AssertionError">&#13;
-Expected: &lt;50&gt;&#13;
-     but: was &lt;0&gt;</failure><system-err>&#13;
-Expected: &lt;50&gt;&#13;
-     but: was &lt;0&gt;&#13;
-com.sdet.test.tests.AutomationTest.shouldCount50Words(AutomationTest.java:37)&#13;
-</system-err></testcase></testsuite>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="com.sdet.test.tests.AutomationTest" skipped="0" tests="1" time="4.04" timestamp="2026-09-25 03:03:12"><testcase classname="com.sdet.test.tests.AutomationTest" name="Should count50 words"/></testsuite>
