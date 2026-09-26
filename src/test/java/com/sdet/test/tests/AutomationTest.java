@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.WebDriver;
 
+import com.sdet.test.algorithms.WordCounterPersonal;
 import com.sdet.test.questions.WordCount;
 import com.sdet.test.tasks.OpenPortalPage;
 import com.sdet.test.tasks.WriteTextOnCounter;
@@ -57,6 +58,9 @@ public class AutomationTest {
     }
     @Test
     void shouldSeeThe3MostRepeatedWords() {
+
+        WordCounterPersonal wordCounter = new WordCounterPersonal(TEXT_TO_COUNT);
+        wordCounter.getWordCountMap(3);
       then(actor).should(seeThat("the word count", WordCount.of(), equalTo(50)));
     }
 

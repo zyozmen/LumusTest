@@ -1,5 +1,5 @@
 com\sdet\test\tasks\OpenPortalPage.class
-com\sdet\test\runners\AutomationTestSuite.class
 com\sdet\test\ui\WordCountPage.class
+com\sdet\test\runners\AutomationTestSuite.class
 com\sdet\test\tests\AutomationTest.class
 com\sdet\test\questions\WordCount.class

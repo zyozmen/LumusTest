@@ -19,9 +19,8 @@ public final class WordCount implements Question<CountResult> {
 
     @Override
     public CountResult answeredBy(Actor actor) {
-        
-        CountResult result = extract(TextValue.of(WordCountPage.WORD_COUNT).answeredBy(actor));
-        return result;
+    
+        return extract(TextValue.of(WordCountPage.WORD_COUNT).answeredBy(actor));
         
     }
 

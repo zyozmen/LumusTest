@@ -11,7 +11,7 @@ public class HistogramMain {
         WordCounterPersonal wordCounter = new WordCounterPersonal(readFile());
         System.out.println("Words: " + wordCounter.getTotalWords());
         System.out.println("Characters: " + wordCounter.getTotalCharacters());
-        System.out.println("Histogram: "+ wordCounter.getWordCountMap());
+        System.out.println("Histogram: "+ wordCounter.getAllWordCount());
 
     }
 
