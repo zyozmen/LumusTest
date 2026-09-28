@@ -1,18 +1,18 @@
 -------------------------------------------------------------------------------
 Test set: com.sdet.test.tests.AutomationTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.430 s <<< FAILURE! -- in com.sdet.test.tests.AutomationTest
-com.sdet.test.tests.AutomationTest.shouldCount50Words -- Time elapsed: 3.151 s <<< FAILURE!
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 5.029 s <<< FAILURE! -- in com.sdet.test.tests.AutomationTest
+com.sdet.test.tests.AutomationTest.shouldSeeThe3MostRepeatedWords -- Time elapsed: 4.750 s <<< FAILURE!
 java.lang.AssertionError: 
 
-Expected: <50>
-     but: was <0>
+Expected: <{para=5, el=4, la=4}>
+     but: was <{prueba=6, para=5, el=5}>
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
 	at net.serenitybdd.screenplay.QuestionConsequence.evaluateFor(QuestionConsequence.java:49)
 	at net.serenitybdd.screenplay.Actor.check(Actor.java:420)
 	at net.serenitybdd.screenplay.Actor.should(Actor.java:392)
-	at com.sdet.test.tests.AutomationTest.shouldCount50Words(AutomationTest.java:41)
+	at com.sdet.test.tests.AutomationTest.shouldSeeThe3MostRepeatedWords(AutomationTest.java:72)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)

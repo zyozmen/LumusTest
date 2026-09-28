@@ -7,12 +7,18 @@ import org.openqa.selenium.WebDriver;
 
 import com.sdet.test.algorithms.WordCounterPersonal;
 import com.sdet.test.questions.WordCount;
+import com.sdet.test.questions.WordDensity;
+import com.sdet.test.tasks.GoToDensitySection;
 import com.sdet.test.tasks.OpenPortalPage;
 import com.sdet.test.tasks.WriteTextOnCounter;
+import com.sdet.test.ui.WordCountPage;
+
 import net.serenitybdd.annotations.Managed;
 import net.serenitybdd.junit5.SerenityJUnit5Extension;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
+import net.serenitybdd.screenplay.actions.Scroll;
+
 import static net.serenitybdd.screenplay.GivenWhenThen.givenThat;
 import static net.serenitybdd.screenplay.GivenWhenThen.then;
 import static net.serenitybdd.screenplay.GivenWhenThen.when;
@@ -60,8 +66,11 @@ public class AutomationTest {
     void shouldSeeThe3MostRepeatedWords() {
 
         WordCounterPersonal wordCounter = new WordCounterPersonal(TEXT_TO_COUNT);
-        wordCounter.getWordCountMap(3);
-      then(actor).should(seeThat("the word count", WordCount.of(), equalTo(50)));
+        var wordCountExpected = wordCounter.getWordCountMap(3);
+
+                when(actor).attemptsTo(WriteTextOnCounter.withText(TEXT_TO_COUNT));
+        when(actor).attemptsTo(GoToDensitySection.now());
+                then(actor).should(seeThat("the word density", WordDensity.of(), equalTo(wordCountExpected)));
     }
 
 

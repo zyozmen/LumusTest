@@ -26,7 +26,7 @@ public final class WordCount implements Question<CountResult> {
 
     public record CountResult(int words, int characters) {}
 
-    public static CountResult extract(String input) {
+    private static CountResult extract(String input) {
         if (input == null || input.isBlank()) {
             throw new IllegalArgumentException("La cadena de entrada no puede estar vacía.");
         }

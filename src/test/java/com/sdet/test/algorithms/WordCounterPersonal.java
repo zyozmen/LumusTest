@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.Map.Entry;
+import java.util.Locale;
 
 public class WordCounterPersonal {
 
@@ -24,26 +25,24 @@ public class WordCounterPersonal {
     }
 
     // metodo para retornar el conteo de palabras
-    public String getWordCountMap(int limit) {
+    public Map<String, Integer> getWordCountMap(int limit) {
         if(limit > wordCountMap.size()){
             limit = wordCountMap.size();
         }
-        StringBuilder sb = new StringBuilder();
+        Map<String, Integer> result = new LinkedHashMap<>();
         int i = 1;
         for (Entry<String, Integer> entry : wordCountMap.entrySet()) {
-            sb.append(entry.getKey()).append(" : ").append(entry.getValue());
-            sb.append("\n");
-            
+            result.put(entry.getKey(), entry.getValue());
             if(i==limit){
                 break;
             }
 
             i++;
         }
-        return sb.toString();
+        return result;
     }
 
-    public String getAllWordCount (){
+    public Map<String, Integer> getAllWordCount (){
         return getWordCountMap(wordCountMap.size());
     }
 
@@ -56,7 +55,7 @@ public class WordCounterPersonal {
         this.totalCharacters = input.toCharArray().length;
 
         // funcion para separar palabras por espacios
-        var words = input.split(" ");
+        var words = input.toLowerCase(Locale.ROOT).split("[^\\p{L}\\p{N}]+");
 
         // definicion de propiedad de cantidad de palabras
         this.totalWords = words.length;
